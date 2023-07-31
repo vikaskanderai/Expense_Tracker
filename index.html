@@ -1,0 +1,161 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600&family=Poppins:wght@300&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <h4><strong>Expense Tracker</strong></h4>
+    </div>
+    
+    <div class="flex">
+        <h3>Enter Transaction</h3> 
+        <div class="outer">
+            <form action="index.php" method="post">
+                <div class="container">
+        
+                    
+                    <div class="desc">
+                        <label for="amount">Enter the amount</label>
+                    </div>
+                    <div class="val">
+                        <input type="number" name="amount" id="amount" placeholder="0.0">
+                    </div>
+
+
+                    <div class="desc">
+                        <label for="name">Sent to/ Received from</label>
+                    </div>
+                    <div class="val">
+                        <input type="text" name="name" id="name" placeholder="Enter the name">
+                    </div>
+                    
+                    
+                    <div class="desc">
+                        <label for="purpose">Purpose</label>
+                    </div>
+                    <div class="val">
+                        <select name="purpose" id="purpose">
+                            <option class="selectOpt" value="">Select</option>
+                            <option value="salary">Salary</option>
+                            <option value="investment">Investment</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="food">Food</option>
+                            <option value="fuel">Fuel</option>
+                            <option value="gifts">Gifts</option>
+                            <option value="Travel">Travel</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="misc">MISC</option>
+                            
+                        </select>
+                    </div>
+
+
+                    <div class="desc">
+                        <label for="type">Transaction Type</label>
+                    </div>
+                    <div class="val">
+                        <div style="display: inline;">
+                            <input type="radio" id="credit" name="type" value="credit">                    
+                            <label for="cash">Credit</label>
+                            <input type="radio" id="debit" name="type" value="debit">
+                            <label for="card">Debit</label>
+                        </div>
+                    </div>
+        
+
+                    <div class="desc">
+                        <label for="mode">Mode of Payment</label>
+                    </div>
+                    <div class="val">
+                        <div style="display: inline;">
+                            <input type="radio" id="cash" name="mode" value="cash">                    
+                            <label for="cash">Cash</label>
+                            <input type="radio" id="card" name="mode" value="card">
+                            <label for="card">Card</label>
+                            <input type="radio" id="upi" name="mode" value="upi">
+                            <label for="upi">UPI</label>
+                        </div>
+                    </div>
+                    
+        
+                    
+                    <div class="desc">
+                        <label for="date">Transaction Date</label>
+                    </div>
+                    <div class="val">
+                        <input type="date" name="date" id="date">
+                    </div>
+                    
+        
+                </div>
+        
+                <input class="btn btn-primary" type="submit" value="Submit" id="submit">
+                </form>
+        </div>
+    
+        <div class="container2">
+            <h3>Expense Summary</h3>
+    
+            <div class="overview">
+                <div class="summary">
+                    <label class="desc">Total credit</label>
+                    <label style="color: green;">0.0/-</label>
+                    <label class="desc">Total debit</label>
+                    <label style="color: red;">0.0/-</label>
+                    <label class="desc">Balance</label>
+                    <label>0.0/-</label>
+                </div> 
+            </div>
+    
+            <div class="overview">
+                <div class="chartContainer">
+                    <canvas class="myChart"></canvas>
+                </div>            
+            </div>
+    
+        </div>
+
+        <div class="list">
+            <h3>My Transactions</h3>
+            <div class="trans">
+                <li class="info">
+                    <div class="pay">
+                        <div class="left">
+                            <h2>100 <span></span></h2>  
+                            <p>(<span>mode</span>)</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                        </svg>
+                    </div>
+                    <p>Title: <span>Purpose</span></p>
+                    <p>Date: <span>dd-mm-yy</span></p>
+
+                </li>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+
+    
+
+
+    <footer>
+        Made with ❤ by Kanderai 
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

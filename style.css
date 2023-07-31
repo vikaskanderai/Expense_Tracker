@@ -1,0 +1,261 @@
+:root{
+    --bg:black;
+    --innerelem:rgba(145, 146, 148, 0.523);
+    --border:rgba(76,76, 77, 1);
+    --heading:white;
+
+    --bg:#E7F6F2;
+    --innerelem:#A5C9CA;
+    --border:#395B64;
+    --heading:#395B64;
+}
+
+body{
+    background-color:var(--bg);
+}
+
+label{
+    color: white;  
+}
+
+.header{
+    margin:-0.5rem ;
+    height: 2.3rem;
+    background-color: var(--heading);
+    
+}
+.header h4{
+    -webkit-text-fill-color: white;
+    font-size: 1.6rem;
+}
+
+h3{
+    font-size: 2rem;
+    color: white;
+    color: var(--heading);
+    text-align: center;
+    grid-column: span 2;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.outer{
+    width: 60%;
+}
+
+form{
+    padding: 2%;
+    background-color: var(--innerelem);
+    border: 3px solid var(--border);
+    border-radius: 7px;
+}
+
+form>p{
+    text-align: center;
+}
+
+
+.container{
+
+    display: grid;
+    row-gap: 10px;
+    align-items: center;
+    grid-template-columns: 1fr 1fr ;
+
+}
+
+.container div{
+    margin: 5px;
+}
+
+.container>div>label{
+    font-family: 'Edu SA Beginner', cursive;
+    width: 50%;
+    display: inline-block;
+    margin-left: 50%;
+    font-weight: 600;
+    color: white;
+}
+
+#submit{
+    padding: 0.5%;
+    margin-top: 1%;
+    width: 8%;
+    margin-left: 46%;
+    background-color: #378b7e;
+    border: 1px solid #2e5e57;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow:2px 2px 1px 0px #5b5b5b;
+}
+
+#submit:active{
+    box-shadow:1px 1px 1px 0px #5b5b5b;
+}
+
+form .desc>label{
+    font-size: 1.3rem;
+    margin-left: 50%;
+
+}
+
+.container2{
+    display: grid;
+    gap: 1%;
+    background-color: var(--container);
+    border-radius: 7px;
+    width: 60%;
+
+    margin-top: 3px;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* expence summary */
+
+.overview{
+    margin-bottom: 3px;
+    width: 99%;
+    background-color: var(--innerelem);
+    border: 3px solid var(--border);
+    border-radius: 7px;
+}
+
+.summary{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    height:60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.container2 h3{
+    font-size: 2rem;
+    color: var(--heading);
+    text-align: center;
+    grid-column: span 2;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.container2 label{
+    font-family: 'Edu SA Beginner', cursive;
+    font-size: 1.3rem;
+    margin-left: 20%;
+}
+
+
+/* Doughnut Chart*/
+.chartContainer{
+    width: 50%;
+    margin-left: 25%;
+
+}
+/*End of doughnut chart*/
+
+/* end of expense summary */
+
+
+/* transaction history */
+.list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: px;
+    width: 60%;
+    background-color: var(--container);
+    margin-top: 3px;
+    border-radius: 7px;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+}
+.list>h3{
+    grid-column: span 3;
+    font-size: 2rem;
+    color: var(--heading);
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.trans{
+    width:90%;
+}
+
+.info{
+    margin: 3px;
+    display: grid;
+    margin-bottom: 3px;
+    padding-left: 3%;
+    width: 99%;
+    background-color: var(--innerelem);
+    border-radius: 7px;
+    box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.3);
+    list-style-type: none;
+    grid-template-rows: 1.5rem 1.5rem 1.5rem ;
+    color: white;
+}
+
+.info h2,p{
+    font-family: 'Edu SA Beginner', cursive;
+} 
+
+.bi{
+    display: inline;
+    width: 1rem;
+    height: 1rem;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    justify-content: left;
+    width: 50%;
+}
+.pay{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pay>p{
+    margin: 0;
+}
+
+.info h2,p{
+    margin: 2px;
+}
+
+.info>p{
+    font-size: 1rem;
+}
+
+.bi{
+    height: 3rem;
+    width: 3rem;
+    color: green;
+}
+
+/* transaction history end */
+
+
+
+footer{
+    margin-top: 9px;
+    font-size: 13px;
+    text-align: center;
+    color: #797979;
+    font-family: 'Poppins', sans-serif;
+}
